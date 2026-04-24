@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">🚀 Spam Analyzer</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/detect">Detector</a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Analyze Message</h1>
+    <p class="subtitle">Paste your message below</p>
+
+    <form action="/predict" method="post">
+        <textarea name="message" placeholder="Enter message..." required>{{ user_input }}</textarea>
+        <button type="submit">Analyze Now</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="result {{ status }}">
+        {{ prediction_text }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

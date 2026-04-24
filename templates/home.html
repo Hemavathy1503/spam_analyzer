@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">🚀 Spam Analyzer</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/detect">Detector</a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Spam Analyzer</h1>
+    <p class="subtitle">
+        Smart AI tool to detect spam messages instantly with confidence score.
+    </p>
+
+    <a href="/detect">
+        <button>Start Analyzing</button>
+    </a>
+</div>
+
+</body>
+</html>
